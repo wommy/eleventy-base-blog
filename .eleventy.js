@@ -20,6 +20,7 @@ module.exports = function (eleventyConfig) {
   // eleventyConfig.addPlugin(EleventyVitePlugin)
   eleventyConfig.setServerOptions({
     module: '@11ty/eleventy-server-browsersync',
+    // domdiff: false,
   })
 
   eleventyConfig.addFilter('readableDate', dateObj => {
@@ -71,34 +72,36 @@ module.exports = function (eleventyConfig) {
     html: true,
     breaks: true,
     linkify: true,
-  }).use(markdownItAnchor, {
-    permalink: markdownItAnchor.permalink.ariaHidden({
-      placement: 'after',
-      class: 'direct-link',
-      symbol: '#',
-      level: [1, 2, 3, 4],
-    }),
-    slugify: eleventyConfig.getFilter('slug'),
-  }).use(MDITtaskLists, { enabled: true, })
+  })
+    .use(markdownItAnchor, {
+      permalink: markdownItAnchor.permalink.ariaHidden({
+        placement: 'after',
+        class: 'direct-link',
+        symbol: '#',
+        level: [1, 2, 3, 4],
+      }),
+      slugify: eleventyConfig.getFilter('slug'),
+    })
+    .use(MDITtaskLists, { enabled: true })
   eleventyConfig.setLibrary('md', markdownLibrary)
 
   // Override Browsersync defaults (used only with --serve)
-  eleventyConfig.setBrowserSyncConfig({
-    callbacks: {
-      ready: function (err, browserSync) {
-        const content_404 = fs.readFileSync('_site/404.html')
+  // eleventyConfig.setBrowserSyncConfig({
+  //   callbacks: {
+  //     ready: function (err, browserSync) {
+  //       const content_404 = fs.readFileSync('_site/404.html')
 
-        browserSync.addMiddleware('*', (req, res) => {
-          // Provides the 404 content without redirect.
-          res.writeHead(404, { 'Content-Type': 'text/html; charset=UTF-8' })
-          res.write(content_404)
-          res.end()
-        })
-      },
-    },
-    ui: false,
-    ghostMode: false,
-  })
+  //       browserSync.addMiddleware('*', (req, res) => {
+  //         // Provides the 404 content without redirect.
+  //         res.writeHead(404, { 'Content-Type': 'text/html; charset=UTF-8' })
+  //         res.write(content_404)
+  //         res.end()
+  //       })
+  //     },
+  //   },
+  //   ui: false,
+  //   ghostMode: false,
+  // })
 
   return {
     // Control which files Eleventy will process
