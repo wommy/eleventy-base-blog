@@ -5,6 +5,7 @@ const pluginSyntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight')
 const pluginNavigation = require('@11ty/eleventy-navigation')
 const markdownIt = require('markdown-it')
 const markdownItAnchor = require('markdown-it-anchor')
+const MDITtaskLists = require('markdown-it-task-lists')
 // const EleventyVitePlugin = require('@11ty/eleventy-plugin-vite')
 
 module.exports = function (eleventyConfig) {
@@ -78,7 +79,7 @@ module.exports = function (eleventyConfig) {
       level: [1, 2, 3, 4],
     }),
     slugify: eleventyConfig.getFilter('slug'),
-  })
+  }).use(MDITtaskLists, { enabled: true, })
   eleventyConfig.setLibrary('md', markdownLibrary)
 
   // Override Browsersync defaults (used only with --serve)
