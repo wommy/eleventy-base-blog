@@ -7,7 +7,7 @@
     <meta name="description" content="{{ description or metadata.description }}">
 
     {#- Uncomment this if you’d like folks to know that you used Eleventy to build your site!  #}
-    {#- <meta name="generator" content="{{ eleventy.generator }}"> #}
+    <meta name="generator" content="{{ eleventy.generator }}">
 
     <link rel="stylesheet" href="/css/prism-theme.css">
     <link rel="stylesheet" href="/css/prism-diff.css">
@@ -37,6 +37,7 @@
 
     <main{% if templateClass %} class="{{ templateClass }}"{% endif %}>
 
+		{#-
       <!-- Delete this message -->
       <div class="infobox">
         <ol>
@@ -47,6 +48,7 @@
         <p><em>This is an <a href="https://www.11ty.dev/">Eleventy project</a> created from the <a href="https://github.com/11ty/eleventy-base-blog"><code>eleventy-base-blog</code> repo</a>.</em></p>
       </div>
       <!-- Stop deleting -->
+ 		#}
 
       {{ content | safe }}
     </main>

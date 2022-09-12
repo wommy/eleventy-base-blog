@@ -1,11 +1,11 @@
 {
-  "title": "Your Blog Name",
-  "url": "https://example.com/",
+  "title": "wom is blogging",
+  "url": "https://wom.is/blogging/",
   "language": "en",
-  "description": "I am writing about my experiences as a naval navel-gazer.",
+  "description": "blogging about adventures in tech",
   "author": {
-    "name": "Your Name Here",
-    "email": "youremailaddress@example.com",
-    "url": "https://example.com/about-me/"
+    "name": "wommy",
+    "email": "tom@technomad.media",
+    "url": "https://wom.is/"
   }
 }
