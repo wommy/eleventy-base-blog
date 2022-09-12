@@ -1,18 +1,27 @@
 ---
-title: This is my second post with a much longer title.
-description: This is a post on My Blog about leveraging agile frameworks.
-date: 2018-07-04
+title: what is on the horizon
+description: i talk about a few upcoming projects
+date: 2022-09-12
 tags:
   - number 2
 layout: layouts/post.njk
 ---
-Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+what is on the horizon for tom, what a great question
 
-## Section Header
+first of all i want to mention that,  
+im watching [dieselcreek](//www.youtube.com/dieselcreek) rebuild a 1980 autocar semi truck
 
-<a href="/blog/firstpost/">First post</a>
-<a href="/blog/thirdpost/">Third post</a>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL_pBKaJD0nwXf9oif79sFC_0mRX28s6ur" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
+so i recently went to the library, i got two books, 
+- a home networking one,
+- and a golang one
 
-Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.
+the golang one i believe is 10 chapters, each with a workbook type portion.  
+
+## todo
+
+1. I was thinking of publishing mine in a repo and talking about it.
+2. i bought those NICs for the homelab, i need to make sure they work
+3. resume
+
